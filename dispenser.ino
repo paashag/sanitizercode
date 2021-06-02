@@ -18,19 +18,22 @@ void loop() {
   digitalWrite(shoutPin, HIGH);
   delayMicroseconds(10);
   digitalWrite(shoutPin, LOW);
-  timeInMicro = pulseIn(listenPin, HIGH);
   duration = pulseIn(listenPin, HIGH)
   distanceCM = microsecondsToCentimeters(duration);
 
+  if (handInRange = true) {
+    
   if (distanceCM < 12) {
     dispenseMotor.write(90);
     bool handInRange = true;
   } else if (distanceCM > 12) { 
-//    do nothing
+    bool handInRange = false;
     } else {
       cout << "Error: Value not found" << endl;
       return 0;
     }
+    
+} else { }
 
-  delay(125); 
+  delay(150); 
 }
