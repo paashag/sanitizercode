@@ -25,6 +25,8 @@ void loop() {
     
   if (distanceCM < 12) {
     dispenseMotor.write(90);
+    delay(350);
+    dispenseMotor.write(0);
     bool handInRange = true;
   } else if (distanceCM > 12) { 
     bool handInRange = false;
@@ -35,5 +37,5 @@ void loop() {
     
 } else { }
 
-  delay(150); 
+  delay(125); 
 }
