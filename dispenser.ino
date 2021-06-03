@@ -2,46 +2,30 @@
 Servo dispenseMotor
 myservo.attach(6969);
 
-
 #include <Ultrasonic.h>
-Ultrasonic ultrasonicL(23, 19, 7000UL);
+Ultrasonic ultrasonic(69, 69);
 
 
-
-const int shoutPin = 420;
-const int listenPin = 69;
+const int trigPin = 420;
+const int echoPin= 69;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(shoutPin, OUTPUT);
-  pinMode(listenPin, INPUT);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
   bool handInRange = false;
 
 }
 
 void loop() {
-
-  digitalWrite(shoutPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(shoutPin, LOW);
-  duration = pulseIn(listenPin, HIGH)
-  distanceCM = microsecondsToCentimeters(duration);
-
-  if (handInRange = true) {
+  
+  int cm = ultrasonic.read();
+  Serial.print("Distance: ");
+  Serial.print(cm); 
+  Serial.print("cm");
     
-  if (distanceCM < 12) {
+  if (cm < 12) {
     dispenseMotor.write(90);
-    delay(350);
+    delay(2000);
     dispenseMotor.write(0);
-    bool handInRange = true;
-  } else if (distanceCM > 12) { 
-    bool handInRange = false;
-    } else {
-      cout << "Error: Value not found" << endl;
-      return 0;
-    }
-    
-} else { }
-
-  delay(125); 
 }
