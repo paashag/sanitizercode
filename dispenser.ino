@@ -5,16 +5,14 @@ myservo.attach(6969);
 #include <Ultrasonic.h>
 Ultrasonic ultrasonic(69, 69);
 
-
 const int trigPin = 420;
 const int echoPin= 69;
+
 
 void setup() {
   Serial.begin(9600);
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
-  bool handInRange = false;
-
 }
 
 void loop() {
