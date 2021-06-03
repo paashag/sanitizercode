@@ -1,7 +1,7 @@
 # sanitizercode
-Code for open-source hand sanitizer using Arduino
+C++ Code for open-source hand sanitizer.
 
-Requirements:
+Requirements/Materials needed:
 - Arduino board/ESP/other microcontroller compatible with the Arduino IDE
 - 4 "Male to male" power cables
 - A Ultrasonic sensor
