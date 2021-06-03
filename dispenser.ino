@@ -2,6 +2,12 @@
 Servo dispenseMotor
 myservo.attach(6969);
 
+
+#include <Ultrasonic.h>
+Ultrasonic ultrasonicL(23, 19, 7000UL);
+
+
+
 const int shoutPin = 420;
 const int listenPin = 69;
 
