@@ -1,6 +1,5 @@
 #include <Servo.h>
-Servo dispenseMotor
-myservo.attach(6969);
+Servo dispenseMotor;
 
 #include <Ultrasonic.h>
 Ultrasonic ultrasonic(69, 69);
@@ -13,6 +12,7 @@ void setup() {
   Serial.begin(9600);
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
+  dispenseMotor.attach(6969);
 }
 
 void loop() {
@@ -28,3 +28,4 @@ void loop() {
     dispenseMotor.write(0);
   }
 }
+
