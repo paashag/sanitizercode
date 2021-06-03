@@ -26,4 +26,5 @@ void loop() {
     dispenseMotor.write(90);
     delay(2000);
     dispenseMotor.write(0);
+  }
 }
